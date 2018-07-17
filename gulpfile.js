@@ -28,13 +28,19 @@ gulp.task('sass', function () {
     .pipe(connect.reload());
 
   });
- 
-  
 
+
+gulp.task('js',()=>{
+  gulp.src('./src/js/*.js')
+      .pipe(gulp.dest('./build/js'))
+      .pipe(connect.reload());
+});
+  
+  
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.sass', ['sass']);
   gulp.watch('./src/templates/*.pug',['html']);
-
+  gulp.watch('./src/js/**/*.js',['js']);
 });
 
 
