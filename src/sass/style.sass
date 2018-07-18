@@ -1,25 +1,19 @@
 @import 'colors';
 
-body
-    background:  #ffffff
-    h1
-        color: blue
-        text-align: center
-        font-size: 6em
+.md-container-tootip-hide
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.33s, opacity 0.63s linear;
+    p
+        color: #ffffff;
 
-.md-container-buttons
-    width: 100%
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    flex-direction: column
 
-    button
-        padding: 2em
-        width: 10em
-        background: blue
-        color: #ffffff
-        font-size: 1rem
-        cursor: pointer
-        border-style: none
+.md-container-tooltip-show
+    background: black
+    width: 20em
+    height: 10vh
+    visibility: visible;
+    opacity: 1;  
+    transition-delay: 0s;
+    p
+        color: #ffffff;

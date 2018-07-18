@@ -5,14 +5,23 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/demo.css")
         title Document
     body
         h1 Tooltip Demo
 
         .md-container-buttons
-            button(id="demo")  Up
-            button Left
-            button Right
-            button Left
+            button(data-toggle="tooltip",data-title="blah",
+                data-description="description" data-direcion="up" id="button-up")
+                | Up
+            button(data-toggle="tooltip",data-title="wow",
+                data-description="description2" data-direcion="up" id="button-left")
+                | Left
+            button(data-toggle="tooltip",data-title="cat",
+                data-description="descriptio3n" data-direcion="up" id="button-right")
+                | Right
+            button(data-toggle="tooltip",data-title="super!",
+                data-description="d3scripti0n" data-direcion="up" id="button-down")
+                | Down
 
     script(src="js/app.js")
