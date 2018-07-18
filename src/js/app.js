@@ -28,12 +28,32 @@
                 let div = this._select.previousSibling.previousElementSibling;
                 console.log(div);
                 if(div.className === 'md-container-tootip-hide'){
-                    div.classList.remove('md-container-tooltip-hide');
-                    div.classList.add('md-container-tooltip-show');                        
+                    switch(this._direccion){
+                        case 'up':
+                            div.classList.remove('md-container-tootip-hide');
+                            div.classList.add('md-container-tooltip-show-up');
+
+                        break;
+                        case 'down':
+                            div.classList.remove('md-container-tootip-hide');
+                            div.classList.add('md-container-tooltip-show-down');
+
+                        break;
+                        case 'left':
+                            div.classList.remove('md-container-tootip-hide');
+                            div.classList.add('md-container-tooltip-show-left');
+                        break;
+                        case 'right':
+                            div.classList.remove('md-container-tootip-hide');
+                            div.classList.add('md-container-tooltip-show-right');
+
+                        break;
+                    }
 
                     setTimeout(() => {
-                        div.classList.remove('md-container-tooltip-show');
-                    }, 1000);
+                        div.classList.remove(div.className);
+                        div.classList.add('md-container-tootip-hide');
+                    }, 600);
                 }
             })
 
